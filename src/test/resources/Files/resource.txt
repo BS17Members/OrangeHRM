@@ -1,0 +1,15 @@
+Settings 
+Import  
+
+keywords:
+ Login with correct creds:
+ 	waitUntilElementLoaded("un" )
+    driver.findElement(By,xpaht("un")).sendkeys("Admin")
+    driver.findElement(By,xpaht("pss")).sendkeys("admin123")
+	driver.findElement(By,xpaht("pss")).click()
+	
+	
+ Login with incorrect creds:
+    driver.findElement(By,xpaht("un")).sendkeys("admin")
+    driver.findElement(By,xpaht("pss")).sendkeys("admin1234")
+	driver.findElement(By,xpaht("pss")).click()

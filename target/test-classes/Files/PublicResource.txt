@@ -1,0 +1,14 @@
+Settings 
+Import 
+
+keywords:
+ WaitforElement
+    implicitwiait(10)
+    
+ waitUntilElementLoaded( )
+	
+Scroll
+   JavaScriptExc
+    js.scrollIntoView()
+		
+ 
