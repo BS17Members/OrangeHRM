@@ -11,8 +11,8 @@
           <include name="beforeClass"/>
           <include name="afterMethod"/>
           <include name="aftertest"/>
-          <include name="afterClass"/>
           <include name="beforetest"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- testPackage.TestClassTNG -->
     </classes>

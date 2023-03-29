@@ -22,6 +22,10 @@ public class HomePage {
 	private WebElement Leave;             // ..
 	
 	
+	@FindBy(xpath="//img[@alt=\"client brand banner\"]")    // ..
+	private WebElement Logo;    
+	
+	
 	public HomePage(WebDriver driver)         // Constructor
 	{
 		PageFactory.initElements(driver, this);  // to avoid StaleElem. Exception
@@ -49,6 +53,11 @@ public class HomePage {
 		return result;
 	}
 
+	public boolean checkVisiblityOfLogo()
+	{
+		boolean result = Logo.isDisplayed();
+		return result;
+	}
 	
 	
 	

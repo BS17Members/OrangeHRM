@@ -5,6 +5,7 @@
 	  <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testPackage.TestClassTNG"/>
+      <class name="testPackage.TestClassOfHomePage"/>
     </classes>
   </test> <!-- Test -->  
 </suite> <!-- Suite -->

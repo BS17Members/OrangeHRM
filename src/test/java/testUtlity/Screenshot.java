@@ -14,7 +14,7 @@ public class Screenshot {
 	{
 //		String p= System.getProperty("user.dir");
 //		System.out.println();
-		String path = System.getProperty("user.dir")+"test-output"+File.separator+"Screenshots"+File.separator+System.currentTimeMillis()+".png";
+		String path = System.getProperty("user.dir")+File.separator+"test-output"+File.separator+"Screenshots"+File.separator+System.currentTimeMillis()+".png";
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File dest = new File(path);
 		FileHandler.copy(source, dest);
