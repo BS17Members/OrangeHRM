@@ -7,30 +7,14 @@
       <class name="testPackage.TestClassTNG">
         <methods>
           <include name="beforeMethod"/>
-          <include name="aftertest"/>
           <include name="VerifyDashboardElemenents"/>
-          <include name="beforetest"/>
           <include name="beforeClass"/>
-          <include name="afterClass"/>
           <include name="afterMethod"/>
+          <include name="aftertest"/>
+          <include name="afterClass"/>
+          <include name="beforetest"/>
         </methods>
       </class> <!-- testPackage.TestClassTNG -->
     </classes>
   </test> <!-- chrome(failed) -->
-  <test thread-count="5" name="firefox(failed)">
-    <parameter name="browser" value="edge"/>
-    <classes>
-      <class name="testPackage.TestClassTNG">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="aftertest"/>
-          <include name="VerifyDashboardElemenents"/>
-          <include name="beforetest"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- testPackage.TestClassTNG -->
-    </classes>
-  </test> <!-- firefox(failed) -->
 </suite> <!-- Failed suite [Suite] -->

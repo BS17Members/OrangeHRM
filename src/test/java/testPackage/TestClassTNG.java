@@ -25,19 +25,8 @@ import pomPackage.LogInPage;
 import testUtlity.ReadFiles;
 import testUtlity.StaticBrowser;
 
-public class TestClassTNG {
-	
-	WebDriver driver;
-	@Parameters({"browser"})
+public class TestClassTNG extends BaseClass {
 
-	@BeforeTest
-	public void beforetest(String browser)
-	{ 
-		 
-		 driver= StaticBrowser.launchBrowser(browser, "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", 10);
-		
-	}
-	
 	@BeforeClass
 	public void beforeClass()
 	{
@@ -53,6 +42,7 @@ public class TestClassTNG {
 	@Test
 	public void VerifyDashboardElemenents() throws InterruptedException, EncryptedDocumentException, IOException
 	{
+		logger = report.createTest("Verify Dashboard Elements");
 		SoftAssert s = new SoftAssert();
 		
 		LogInPage login = new LogInPage(driver);				
@@ -61,10 +51,10 @@ public class TestClassTNG {
 		login.sendPassword(ReadFiles.fetchDataFromExcel(1, 1));
 		login.clickOnLoginButton();
 		Thread.sleep(1000);
-		String ExpectedURL = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
+		String ExpectedURL = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard";
 		String ActualURL= driver.getCurrentUrl();
 		
-		Assert.assertEquals(ActualURL,ExpectedURL); //pass
+		Assert.assertEquals(ActualURL,ExpectedURL); //fail
 	
 		HomePage home = new HomePage(driver);
 		boolean result1 = home.verifyAdminOption();
@@ -107,13 +97,16 @@ public class TestClassTNG {
 //		
 //		s.assertAll();
 		
-		System.out.println("Browser launched");
+//	Assert.fail();
+		
 	}
 	
-	@AfterMethod
-	public void afterMethod()
+	@Test
+	public void verifyAdmin()
 	{
-		System.out.println("After Method  of Class1");
+		logger = report.createTest("Verify Admin Tab");
+
+		System.out.println("This is admin test");
 	}
 	
 	@AfterClass
@@ -122,11 +115,6 @@ public class TestClassTNG {
 		System.out.println("After Class of Class1");
 	}
 	
-	@AfterTest
-	public void aftertest()
-	{
-		driver.quit();
-	}
 	
 	
 }

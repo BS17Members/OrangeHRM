@@ -6,12 +6,12 @@
       <class name="testPackage.TestClassTNG">
         <methods>
           <include name="beforeMethod"/>
-          <include name="aftertest"/>
-          <include name="VerifyDashboardElemenents"/>
-          <include name="beforetest"/>
+          <include name="verifyAdmin"/>
           <include name="beforeClass"/>
-          <include name="afterClass"/>
           <include name="afterMethod"/>
+          <include name="aftertest"/>
+          <include name="afterClass"/>
+          <include name="beforetest"/>
         </methods>
       </class> <!-- testPackage.TestClassTNG -->
     </classes>
